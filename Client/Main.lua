@@ -434,7 +434,7 @@ local playerpos = false
 
 Citizen.CreateThread(function()
     while(true) do
-		oPlayer = GetPlayerPed(-1)
+		oPlayer = PlayerPedId()
         InVehicle = IsPedInAnyVehicle(oPlayer, true)
 		playerpos = GetEntityCoords(oPlayer)
         Citizen.Wait(500)
@@ -499,7 +499,7 @@ Citizen.CreateThread(function() -- Jobs
 						SetPedCombatRange(goon2, 2)
 						SetPedKeepTask(goon2, true)
 						GiveWeaponToPed(goon2, GetHashKey('WEAPON_CARBINERIFLE'),250,false,true)
-					local playerped = GetPlayerPed(-1)
+					local playerped = PlayerPedId()
 					
 					AddRelationshipGroup('DrugsNPC')
 					AddRelationshipGroup('PlayerPed')
